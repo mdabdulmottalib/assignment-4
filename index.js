@@ -17,7 +17,7 @@ function calculateTax(income, expenses) {
 }
 
 function signature(email) {
-  if (email) {
+  if (typeof email === "string") {
     let email_arr = email.split("@");
     let name = email_arr[0];
     return `${name} sent you an email from ${email_arr[1]}`;
